@@ -76,7 +76,7 @@ class RegistrationForm(QMainWindow):
                 cur.execute("""INSERT INTO users(login, password, role, home_num) VALUES (?, ?, ?, ?)""",
                             (self.login.text(), hash_passw, 1, self.home_num.text()))
                 conn.commit()
-                self.main = MainForm(self)
+                self.main = MainForm()
                 self.main.show()
                 self.close()
             else:
